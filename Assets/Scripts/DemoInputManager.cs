@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using static UnityEngine.Color;
 
+[RequireComponent(typeof(MotionAIManager))]
 public class DemoInputManager : MonoBehaviour
 {
     
