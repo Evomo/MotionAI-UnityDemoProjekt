@@ -339,8 +339,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 419963731}
-        m_TargetAssemblyTypeName: MotionAI.Core.Controller.MotionAIManager, MotionAI.Core
+      - m_Target: {fileID: 419963733}
+        m_TargetAssemblyTypeName: DemoInputManager, Assembly-CSharp
         m_MethodName: StopTracking
         m_Mode: 1
         m_Arguments:
@@ -471,8 +471,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 419963731}
-        m_TargetAssemblyTypeName: MotionAI.Core.Controller.MotionAIManager, MotionAI.Core
+      - m_Target: {fileID: 419963733}
+        m_TargetAssemblyTypeName: DemoInputManager, Assembly-CSharp
         m_MethodName: StartTracking
         m_Mode: 1
         m_Arguments:
@@ -532,8 +532,6 @@ GameObject:
   - component: {fileID: 330709168}
   - component: {fileID: 330709167}
   - component: {fileID: 330709166}
-  - component: {fileID: 330709170}
-  - component: {fileID: 330709169}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -589,104 +587,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &330709169
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330709165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4866a5ef30873ce4f870d500659bc92b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  modelType: 1
-  moves:
-    bench_dip:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    jumping_jack:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    mountain_climbers:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    lunge:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    burpee:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    squat_jump:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    high_knees:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    hip_raise:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    calf_raise:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    plank:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    climbers:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    plank_jack:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    lunge_reverse:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-    good_morning:
-      onMove:
-        m_PersistentCalls:
-          m_Calls: []
-  meta: {}
---- !u!114 &330709170
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 330709165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00f18919ba0d45adacec825fb33fa6b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deviceOrientation: 0
-  controllerSettings:
-    isPaired: 0
-    deviceId: 
-    isGlobal: 1
-  modelManager:
-    chosenModel:
-      GuidAssignmentFailed: 0
-      GUID: 4866a5ef30873ce4f870d500659bc92b
-      TypeNameAndAssembly: MotionAI.Core.Models.Generated.Bodyweight, MotionAI.Core
-      _suppressLogs: 0
-    modelComponent: {fileID: 330709169}
-  OnEvoMovement:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &393623818
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +731,7 @@ GameObject:
   m_Component:
   - component: {fileID: 419963732}
   - component: {fileID: 419963731}
+  - component: {fileID: 419963733}
   m_Layer: 0
   m_Name: MotionManager
   m_TagString: Untagged
@@ -865,7 +766,7 @@ MonoBehaviour:
         m_Calls: []
   movesenseSensorIdent: 
   automaticPairing: 1
-  isTracking: 1
+  isTracking: 0
   isDebug: 1
 --- !u!4 &419963732
 Transform:
@@ -881,6 +782,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &419963733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 419963730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 217f2d49f5fbe46879865555e5be1d88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SquatIndicator: {fileID: 621859278}
+  PushUpIndicator: {fileID: 718856834}
+  maim: {fileID: 0}
 --- !u!1 &620910405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,7 +2062,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1424835803}
-  - component: {fileID: 1424835802}
   - component: {fileID: 1424835805}
   - component: {fileID: 1424835804}
   m_Layer: 0
@@ -2156,21 +2071,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1424835802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424835801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 217f2d49f5fbe46879865555e5be1d88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SquatIndicator: {fileID: 621859278}
-  PushUpIndicator: {fileID: 718856834}
-  maim: {fileID: 0}
 --- !u!4 &1424835803
 Transform:
   m_ObjectHideFlags: 0
@@ -2288,7 +2188,7 @@ MonoBehaviour:
     squat:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1424835802}
+        - m_Target: {fileID: 419963733}
           m_TargetAssemblyTypeName: DemoInputManager, Assembly-CSharp
           m_MethodName: TriggerSquatIndicator
           m_Mode: 1
@@ -2303,7 +2203,7 @@ MonoBehaviour:
     pushUp:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1424835802}
+        - m_Target: {fileID: 419963733}
           m_TargetAssemblyTypeName: DemoInputManager, Assembly-CSharp
           m_MethodName: TriggerPushUpIndicator
           m_Mode: 1
